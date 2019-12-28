@@ -31,7 +31,7 @@ export default observer(() => {
     const {someAttribute, toggleAttributeState} = useContext(context.exampleState);
     return (
         <ExampleFeature id="example-feature-animation" onClick={toggleAttributeState}>
-            My State is: {someAttribute ? "TRUE" : "FALSE"}
+            My State is: {someAttribute ? 'TRUE' : 'FALSE'}
         </ExampleFeature>
     );
 });
