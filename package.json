@@ -4,9 +4,12 @@
     "description": "A React, Typescript, and Parcel boilerplate",
     "main": "index.tsx",
     "scripts": {
+        "clean": "rimraf dist tmp",
         "start": "parcel src/index.html --no-cache",
-        "build": "parcel build src/index.html",
-        "serve": "parcel serve src/index.html"
+        "build": "npm run clean && parcel build src/index.html",
+        "serve": "npm run clean && parcel serve src/index.html",
+        "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+        "prettier": "prettier \"src/**/*\" --write"
     },
     "repository": {
         "type": "git",
@@ -23,8 +26,14 @@
         "@types/react": "^16.8.23",
         "@types/react-dom": "^16.8.5",
         "@types/styled-components": "^4.1.18",
+        "@typescript-eslint/eslint-plugin": "^2.13.0",
+        "@typescript-eslint/parser": "^2.13.0",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.9.0",
+        "eslint-plugin-react": "^7.17.0",
         "parcel-bundler": "^1.12.3",
         "prettier": "^1.18.2",
+        "rimraf": "^3.0.0",
         "typescript": "^3.7.0"
     },
     "dependencies": {
