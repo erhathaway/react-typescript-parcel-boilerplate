@@ -13,6 +13,7 @@
         "sourceMap": true,
         "strict": true,
         "target": "es6",
+        "skipLibCheck": true
     },
-    "exclude": ["node_modules/**"]
+    "exclude": ["node_modules/*"]
 }

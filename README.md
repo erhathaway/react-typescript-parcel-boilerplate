@@ -17,8 +17,10 @@ A React,Typescript, and Parcel boilerplate
     - `bugs`
     - `homepage`
 
-2. Install the dependencies `npm install` or `yarn install`
-3. Run the example app `npm run start`
+2. Edit the `.github/CODEOWNERS` file and add your github user name
+
+3. Install the dependencies `npm install` or `yarn install`
+4. Run the example app `npm run start`
 
 # Architecture
 

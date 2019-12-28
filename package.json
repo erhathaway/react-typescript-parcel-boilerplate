@@ -9,7 +9,9 @@
         "build": "npm run clean && parcel build src/index.html",
         "serve": "npm run clean && parcel serve src/index.html",
         "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-        "prettier": "prettier \"src/**/*\" --write",
+        "prettier:fix": "prettier \"src/**/*\" --write",
+        "prettier:check": "prettier \"src/**/*\" --check",
+        "type-check": "tsc --noEmit",
         "test": "jest"
     },
     "repository": {
@@ -33,6 +35,7 @@
         "@typescript-eslint/parser": "^2.13.0",
         "eslint": "^6.8.0",
         "eslint-config-prettier": "^6.9.0",
+        "eslint-plugin-jest": "^23.1.1",
         "eslint-plugin-react": "^7.17.0",
         "jest": "^24.9.0",
         "parcel-bundler": "^1.12.3",
