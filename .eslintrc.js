@@ -9,7 +9,6 @@ module.exports = {
         'prettier/@typescript-eslint',
         'plugin:react/recommended'
     ],
-
     settings: {
         react: {
             createClass: 'createReactClass', // Regex for Component Factory to use,

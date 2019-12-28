@@ -9,14 +9,14 @@ class ExampleState {
         });
     }
 
-    public toggleAttributeState = () => {
-        runInAction(() => {
+    public toggleAttributeState = (): void => {
+        return runInAction(() => {
             this.internalAttributeState = !this.someAttribute;
         });
     };
 
-    get someAttribute() {
-        return this.internalAttributeState;
+    get someAttribute(): boolean {
+        return this.internalAttributeState || false;
     }
 }
 

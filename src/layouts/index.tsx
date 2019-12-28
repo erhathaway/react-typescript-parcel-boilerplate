@@ -9,7 +9,7 @@ const RootLayoutContainer = styled.div`
     overflow: hidden;
 `;
 
-const Root = () => {
+const Root = (): JSX.Element => {
     return (
         <RootLayoutContainer>
             <ExampleComponent />
