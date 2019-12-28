@@ -9,7 +9,8 @@
         "build": "npm run clean && parcel build src/index.html",
         "serve": "npm run clean && parcel serve src/index.html",
         "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-        "prettier": "prettier \"src/**/*\" --write"
+        "prettier": "prettier \"src/**/*\" --write",
+        "test": "jest"
     },
     "repository": {
         "type": "git",
@@ -23,17 +24,22 @@
     "homepage": "https://github.com/erhathaway/react-typescript-parcel-boilerplate#readme",
     "devDependencies": {
         "@types/animejs": "^3.1.0",
+        "@types/jest": "^24.0.25",
         "@types/react": "^16.8.23",
         "@types/react-dom": "^16.8.5",
+        "@types/react-test-renderer": "^16.9.1",
         "@types/styled-components": "^4.1.18",
         "@typescript-eslint/eslint-plugin": "^2.13.0",
         "@typescript-eslint/parser": "^2.13.0",
         "eslint": "^6.8.0",
         "eslint-config-prettier": "^6.9.0",
         "eslint-plugin-react": "^7.17.0",
+        "jest": "^24.9.0",
         "parcel-bundler": "^1.12.3",
         "prettier": "^1.18.2",
+        "react-test-renderer": "^16.12.0",
         "rimraf": "^3.0.0",
+        "ts-jest": "^24.2.0",
         "typescript": "^3.7.0"
     },
     "dependencies": {

@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from 'react';
 import styled from 'styled-components';
-import context from '../context';
+import context from '../../context';
 import {observer} from 'mobx-react';
 import anime from 'animejs';
 
