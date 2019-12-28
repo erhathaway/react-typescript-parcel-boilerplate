@@ -1,10 +1,10 @@
 import React from 'react';
-import ExampleComponent from './index';
+import ExampleFeature from './index';
 import renderer from 'react-test-renderer';
 
-describe('ExampleComponent', () => {
+describe('ExampleFeature', () => {
     it('renders correctly', () => {
-        const tree = renderer.create(<ExampleComponent />).toJSON();
+        const tree = renderer.create(<ExampleFeature />).toJSON();
         expect(tree).toMatchInlineSnapshot(`
             <div
               className="sc-bdVaJa fYXGIz"

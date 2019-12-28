@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {ExampleComponent} from '../components';
+import {ExampleFeature} from '../features';
 
 const RootLayoutContainer = styled.div`
     width: calc(100% - 80px);
@@ -12,7 +12,7 @@ const RootLayoutContainer = styled.div`
 const Root = (): JSX.Element => {
     return (
         <RootLayoutContainer>
-            <ExampleComponent />
+            <ExampleFeature />
         </RootLayoutContainer>
     );
 };
