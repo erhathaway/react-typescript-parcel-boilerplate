@@ -22,8 +22,8 @@ jobs:
             - name: Install NPM dependencies
               run: npm install
 
-    start:
-        name: Run parcel start
+    build:
+        name: Build js bundle
         needs: [install]
         runs-on: ubuntu-latest
         steps:
@@ -40,11 +40,11 @@ jobs:
                   path: node_modules
                   key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
-            - name: Run parcel server
-              run: npm start
+            - name: Run parcel build
+              run: npm run build
 
     lint:
-        name: Run parcel start
+        name: Run linter
         needs: [install]
         runs-on: ubuntu-latest
         steps:
@@ -62,4 +62,67 @@ jobs:
                   key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
             - name: Run linter
-              run: npm lint
+              run: npm run lint
+
+    test:
+        name: Run tests
+        needs: [install]
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1
+
+            - name: Use Node.js 13.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: '13.x'
+
+            - name: Restore cached node modules
+              uses: actions/cache@v1
+              with:
+                  path: node_modules
+                  key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+            - name: Run test suit
+              run: npm run test
+
+    prettier:
+        name: Run prettier
+        needs: [install]
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1
+
+            - name: Use Node.js 13.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: '13.x'
+
+            - name: Restore cached node modules
+              uses: actions/cache@v1
+              with:
+                  path: node_modules
+                  key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+            - name: Run prettier
+              run: npm run prettier:check
+
+    type-check:
+        name: Run TSC type check
+        needs: [install]
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1
+
+            - name: Use Node.js 13.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: '13.x'
+
+            - name: Restore cached node modules
+              uses: actions/cache@v1
+              with:
+                  path: node_modules
+                  key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+            - name: Run type check
+              run: npm run type-check
