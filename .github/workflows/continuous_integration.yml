@@ -6,62 +6,62 @@ jobs:
     name: Install dependencies
     runs-on: ubuntu-latest
       steps:
-      - uses: actions/checkout@v1
+        - uses: actions/checkout@v1
 
-      - name: Use Node.js 13.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: '13.x'
+        - name: Use Node.js 13.x
+          uses: actions/setup-node@v1
+          with:
+            node-version: '13.x'
 
-      - name: Cache node modules
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-  
-      - name: Install NPM dependencies
-        run: npm install
+        - name: Cache node modules
+          uses: actions/cache@v1
+          with:
+            path: node_modules
+            key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+    
+        - name: Install NPM dependencies
+          run: npm install
 
   start:
     name: Run parcel start
     needs: [install]
     runs-on: ubuntu-latest
       steps:
-      - uses: actions/checkout@v1
+        - uses: actions/checkout@v1
 
-      - name: Use Node.js 13.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: '13.x'
+        - name: Use Node.js 13.x
+          uses: actions/setup-node@v1
+          with:
+            node-version: '13.x'
 
-      - name: Restore cached node modules
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-  
-      - name: Run parcel server
-        run: npm start
+        - name: Restore cached node modules
+          uses: actions/cache@v1
+          with:
+            path: node_modules
+            key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+    
+        - name: Run parcel server
+          run: npm start
 
   lint:
     name: Run parcel start
     needs: [install]
     runs-on: ubuntu-latest
       steps:
-      - uses: actions/checkout@v1
+        - uses: actions/checkout@v1
 
-      - name: Use Node.js 13.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: '13.x'
+        - name: Use Node.js 13.x
+          uses: actions/setup-node@v1
+          with:
+            node-version: '13.x'
 
-      - name: Restore cached node modules
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        - name: Restore cached node modules
+          uses: actions/cache@v1
+          with:
+            path: node_modules
+            key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
-      - name: Run linter
-        run: npm lint
+        - name: Run linter
+          run: npm lint
 
   
