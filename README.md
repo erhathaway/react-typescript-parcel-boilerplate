@@ -1,6 +1,8 @@
 # react-typescript-parcel-boilerplate
 A React,Typescript, and Parcel boilerplate
 
+...with MobX, Styled-Components, and AnimeJS along for the ride
+
 # Usage
 
 1. Edit the `package.json` file and specify project attributes. All of the following should be customized:
