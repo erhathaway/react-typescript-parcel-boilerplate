@@ -1,8 +1,20 @@
 # react-typescript-parcel-boilerplate
 
-A React,Typescript, and Parcel boilerplate
+![](https://github.com/erhathaway/react-typescript-parcel-boilerplate/workflows/Continous%20Integration/badge.svg)
+
+An opinionated React,Typescript, and Parcel boilerplate
 
 ...with MobX, Styled-Components, and AnimeJS along for the ride
+
+# About
+
+-   Styling is handled by [Styled-Components](https://www.styled-components.com/)
+-   Animations are handled by [AnimeJS](https://animejs.com/)
+-   Business logic is handled by [MobX](https://mobx.js.org/README.html)
+-   Continuous Integration is done via [GitHub Actions](https://github.com/features/actions)
+-   Testing supports Typescript and uses React Test Renderer
+    -   In the example app, tests are colocated next to the file they test and snapshots are run inline for easier reading
+-   ESLint is configured to work with Typescript, Prettier, and Jest
 
 # Usage
 
@@ -19,8 +31,9 @@ A React,Typescript, and Parcel boilerplate
 
 2. Edit the `.github/CODEOWNERS` file and add your github user name
 
-3. Install the dependencies `npm install` or `yarn install`
-4. Run the example app `npm run start`
+3. Edit the Continuous Integration badge in the `README.md`. [See the github docs on action badges](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow#adding-a-workflow-status-badge-to-your-repository)
+4. Install the dependencies `npm install` or `yarn install`
+5. Run the example app `npm run start`
 
 # Architecture
 
