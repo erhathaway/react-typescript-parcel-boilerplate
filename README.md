@@ -1,6 +1,7 @@
 # react-typescript-parcel-boilerplate
 
 ![](https://github.com/erhathaway/react-typescript-parcel-boilerplate/workflows/Continous%20Integration/badge.svg)
+![](https://api.dependabot.com/badges/status?host=github&repo=erhathaway/react-typescript-parcel-boilerplate)
 
 An opinionated React,Typescript, and Parcel boilerplate
 
@@ -32,6 +33,7 @@ An opinionated React,Typescript, and Parcel boilerplate
 2. Edit the `.github/CODEOWNERS` file and add your github user name
 
 3. Edit the Continuous Integration badge in the `README.md`. [See the github docs on action badges](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow#adding-a-workflow-status-badge-to-your-repository)
+4. Edit (or delete) the Dependabot badge in the `README.md`. Use `<username>/<reponame>` syntax
 4. Install the dependencies `npm install` or `yarn install`
 5. Run the example app `npm run start`
 
