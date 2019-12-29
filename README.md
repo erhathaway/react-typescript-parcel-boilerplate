@@ -12,10 +12,11 @@ An opinionated React,Typescript, and Parcel boilerplate
 -   Styling is handled by [Styled-Components](https://www.styled-components.com/)
 -   Animations are handled by [AnimeJS](https://animejs.com/)
 -   Business logic is handled by [MobX](https://mobx.js.org/README.html)
--   Continuous Integration is done via [GitHub Actions](https://github.com/features/actions)
+-   Continuous Integration (CI) is done via [GitHub Actions](https://github.com/features/actions)
 -   Testing supports Typescript and uses React Test Renderer
     -   In the example app, tests are colocated next to the file they test and snapshots are run inline for easier reading
 -   ESLint is configured to work with Typescript, Prettier, and Jest
+-   Husky is added for git-hooks. The pre-commit hook checks similar things as the CI
 
 # Usage
 
@@ -34,8 +35,8 @@ An opinionated React,Typescript, and Parcel boilerplate
 
 3. Edit the Continuous Integration badge in the `README.md`. [See the github docs on action badges](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow#adding-a-workflow-status-badge-to-your-repository)
 4. Edit (or delete) the Dependabot badge in the `README.md`. Use `<username>/<reponame>` syntax
-4. Install the dependencies `npm install` or `yarn install`
-5. Run the example app `npm run start`
+5. Install the dependencies `npm install` or `yarn install`
+6. Run the example app `npm run start`
 
 # Architecture
 
