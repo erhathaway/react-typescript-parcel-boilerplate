@@ -1,6 +1,17 @@
 module.exports = {
     root: true,
     parser: '@typescript-eslint/parser',
+    parserOptions: {
+        ecmaVersion: 2020,
+        sourceType: 'module',
+        ecmaFeatures: {
+            jsx: true
+        }
+    },
+    env: {
+        browser: true,
+        node: true
+    },
     plugins: ['@typescript-eslint', 'jest'],
     extends: [
         'eslint:recommended',
@@ -14,7 +25,13 @@ module.exports = {
         'jest/no-focused-tests': 'error',
         'jest/no-identical-title': 'error',
         'jest/prefer-to-have-length': 'warn',
-        'jest/valid-expect': 'error'
+        'jest/valid-expect': 'error',
+        '@typescript-eslint/explicit-function-return-type': [
+            'error',
+            {
+                allowExpressions: true
+            }
+        ]
     },
     settings: {
         react: {
