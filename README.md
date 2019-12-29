@@ -1,6 +1,7 @@
 # react-typescript-parcel-boilerplate
 
 ![](https://github.com/erhathaway/react-typescript-parcel-boilerplate/workflows/Continous%20Integration/badge.svg)
+![](https://api.dependabot.com/badges/status?host=github&repo=erhathaway/react-typescript-parcel-boilerplate)
 
 An opinionated React,Typescript, and Parcel boilerplate
 
@@ -32,6 +33,7 @@ An opinionated React,Typescript, and Parcel boilerplate
 2. Edit the `.github/CODEOWNERS` file and add your github user name
 
 3. Edit the Continuous Integration badge in the `README.md`. [See the github docs on action badges](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow#adding-a-workflow-status-badge-to-your-repository)
+4. Edit (or delete) the Dependabot badge in the `README.md`. Use `<username>/<reponame>` syntax
 4. Install the dependencies `npm install` or `yarn install`
 5. Run the example app `npm run start`
 
@@ -39,7 +41,7 @@ An opinionated React,Typescript, and Parcel boilerplate
 
 The example app architecture follows an MVC paradigm. The `M` = `State`, `V` = `Features`, and the `C` = `Layouts`. Thus, you compose a layout of features and interplate state into those features. In my opinion, this helps separate the view layer from the business layer and makes it easy to do feature development and maintance on the code base.
 
--   `src/layouts`: The app is organized around `layouts`. `Layouts` describe how `Features` visually appear with respect to one another and how the `Features` are routed. Interactions among `Features`, like Animations, routing, and viewport adjustments should be handled at the layout level.
+-   `src/layouts`: The app is organized around `layouts`. `Layouts` describe how `Features` visually appear with respect to one another. Interactions among `Features`, like animations, routing, and viewport adjustments should be handled at the layout level.
 -   `src/features` `Features` are isolated units. `State` is bound to `Features` via the React Context API and MobX. `Features` should only be a view layer - all business logic should be interpolated into the view layer... not defined in the view layer!.
 -   `src/state`: Business logic is stored in the `state` folder. This logic is written in a functional reactive paradigm - hence the usage of MobX.
 -   `src/context`: The place where state is bound to the Context API. Business logic is instantiated here.
