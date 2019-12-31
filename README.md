@@ -1,6 +1,6 @@
 # react-typescript-parcel-boilerplate
+[![Actions Status](https://github.com/erhathaway/react-typescript-parcel-boilerplate/workflows/Continous%20Integration/badge.svg)](https://github.com/erhathaway/react-typescript-parcel-boilerplate/actions)
 
-![](https://github.com/erhathaway/react-typescript-parcel-boilerplate/workflows/Continous%20Integration/badge.svg)
 ![](https://api.dependabot.com/badges/status?host=github&repo=erhathaway/react-typescript-parcel-boilerplate)
 
 An opinionated React,Typescript, and Parcel boilerplate
