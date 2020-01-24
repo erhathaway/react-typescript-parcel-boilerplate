@@ -31,12 +31,12 @@
     "homepage": "https://github.com/erhathaway/react-typescript-parcel-boilerplate#readme",
     "devDependencies": {
         "@types/animejs": "^3.1.0",
-        "@types/jest": "^24.0.25",
+        "@types/jest": "^24.9.0",
         "@types/react": "^16.8.23",
         "@types/react-dom": "^16.8.5",
         "@types/react-test-renderer": "^16.9.1",
         "@types/styled-components": "^4.4.2",
-        "@typescript-eslint/eslint-plugin": "^2.13.0",
+        "@typescript-eslint/eslint-plugin": "^2.17.0",
         "@typescript-eslint/parser": "^2.17.0",
         "eslint": "^6.8.0",
         "eslint-config-prettier": "^6.9.0",
@@ -53,7 +53,7 @@
     },
     "dependencies": {
         "animejs": "^3.1.0",
-        "mobx": "^5.15.0",
+        "mobx": "^5.15.2",
         "mobx-react": "^6.1.5",
         "react": "^16.11.0",
         "react-dom": "^16.11.0",
